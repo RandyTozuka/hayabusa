@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="UTF-8">
+    <title>Hayabusa Drone Service</title>
+    <meta name="description" content="ページの紹介文">
+
+    <!-- レスポンシブ対応のためのviewportを設定する -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fontawesome読み込み -->
+    <script src="https://kit.fontawesome.com/e7ca3f8660.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <!-- プラウザ独自のCSS設定をクリアにする -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <!-- スタイルシートを参照する -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <!-- Bootstrapを参照する -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- jquery 読み込み -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- スクロールダウン　参考: https://125naroom.com/web/2899 -->
+    <script type="text/javascript">
+      $(function(){
+    // #で始まるa要素をクリックした場合に処理（"#"←ダブルクォーテンションで囲むのを忘れずに。忘れるとjQueryのバージョンによっては動かない。。）
+        $('a[href^="#"]').click(function(){
+    // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
+          var adjust = 0;
+    // スクロールの速度（ミリ秒）
+          var speed = 400;
+    // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
+          var href= $(this).attr("href");
+    // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
+          var target = $(href == "#" || href == "" ? 'html' : href);
+    // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
+          var position = target.offset().top + adjust;
+    // スムーススクロール linear（等速） or swing（変速）
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+ </head>
+
+ <body>
+  <header>
+    <div id="page_header" class="page_header">
+      <div class="logo">
+        <p>HAYABUSA</p>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul class="main_nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#company_intro">About & Services</a></li>
+            <li><a href="#plan">Plan</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#pilots_intro">Pilots</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="top_image">
+      <h1>Hayabusa Drone Service</h1>
+      <div id="video-area" class="video_area">
+        <video id="video" poster="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/img/movie.jpg" webkit-playsinline playsinline muted autoplay loop>
+          <source src="/Users/randytozuka/Desktop/playGround/my_web_site/materials/movies/mv1.mp4" type="video/mp4">
+          <p>動画を再生できる環境ではありません。</p>
+        </video>
+      <!--/video-area--></div>
+    </div>
+    <div id="company_intro" class="container company_intro">
+      <h1>Hayabusa Drone Service</h1>
+      <p>トレーニングを受けた、プロUAVパイロットが、空撮をはじめとするドローンを用いた業務を安全第一で承ります</p>
+      <div class="flex_container">
+        <div class="service service_1">
+          <a class="wrapper" href="https://www.colordic.org/">
+            <p>空撮</p>
+            <img src="/Users/randytozuka/Desktop/playGround/hayabusa_drone_service/aerial_shoot_sample.jpg" alt="空撮画像">
+          </a>
+        </div>
+        <div class="service service_2">
+          <a class="wrapper" href="https://www.colordic.org/">
+            <p>測量</p>
+            <img src="/Users/randytozuka/Desktop/playGround/hayabusa_drone_service/aerial_surveying.jpg" alt="空撮画像">
+          </a>
+        </div>
+        <div class="service service_3">
+          <a class="wrapper" href="https://www.colordic.org/">
+            <p>屋根外壁<br>点検</p>
+            <img src="/Users/randytozuka/Desktop/playGround/hayabusa_drone_service/roof_investigation.jpg" alt="">
+          </a>
+        </div>
+        <div class="service service_4">
+          <a class="wrapper" href="https://www.colordic.org/">
+            <p>構造物点検</p>
+            <img src="/Users/randytozuka/Desktop/playGround/hayabusa_drone_service/structures.jpg" alt="">
+          </a>
+        </div>
+      </div>
+      <a href="#page_header">▲back</a>
+    </div>
+    <div id="plan" class="container plan">
+      <div class="flex_container">
+        <div class="plan_a">
+          ここに価格プランAが入ります
+        </div>
+        <div class="plan_b">
+          ここに価格プランBが入ります
+        </div>
+        <div class="plan_c">
+          ここに価格プランCが入ります
+        </div>
+      </div>
+      <a href="#page_header">▲back</a>
+    </div>
+    <div id="contact" class="container contact">
+      <div class="flex_container_contact">
+        <div class="contact_item contact_left">
+          <p>HAYABUSA Drone Service</p>
+          <p class="address">〒135-0062 東京都江東区東雲1-9-32-1001</p>
+          <p class="phone">090-7194-1136</p>
+          <p class="e_mail">kazm1208@me.com</p>
+        </div>
+        <div class="contact_item contact_right">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4665.552162188201!2d139.80316341188043!3d35.64331637512172!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601889c83ea1ab35%3A0xcc4bc584b4a5182a!2z44CSMTM1LTAwNjIg5p2x5Lqs6YO95rGf5p2x5Yy65p2x6Zuy77yR5LiB55uu77yZ4oiS77yT77yS!5e0!3m2!1sja!2sjp!4v1646391031422!5m2!1sja!2sjp" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+      <a href="#page_header">▲back</a>
+    </div>
+    <div id="pilots_intro" class="container pilots_intro">
+      <div class="flex_container">
+        <div class="cv">
+          <img src="/Users/randytozuka/Desktop/playGround/my_web_site/materials/pictures/kazutoMaeji.jpeg" alt="Kazuto Maeji">
+          <p>前地 カズト</p>
+          <p>総飛行時間　9.35 Hr</p>
+          <p>UAV操縦士技能講習　初級 </p>
+        <!--/cv--></div>
+        <div class="cv">
+          <img src="/Users/randytozuka/Desktop/playGround/my_web_site/materials/pictures/kazutoMaeji.jpeg" alt="Kazuto Maeji">
+          <p>前地 カズト</p>
+          <p>総飛行時間　9.35 Hr</p>
+          <p>UAV操縦士技能講習　初級 </p>
+        <!--/cv--></div>
+        <div class="cv">
+          <img src="/Users/randytozuka/Desktop/playGround/my_web_site/materials/pictures/kazutoMaeji.jpeg" alt="Kazuto Maeji">
+          <p>前地 カズト</p>
+          <p>総飛行時間　9.35 Hr</p>
+          <p>UAV操縦士技能講習　初級 </p>
+        <!--/cv--></div>
+      <!--/flex-container--></div>
+      <a href="#page_header">▲back</a>
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      footer
+    </div>
+  </footer>
+ </body>
+</html>
