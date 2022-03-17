@@ -53,7 +53,7 @@ header{
 .top_image{
   position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
   text-align: center;
-  width: auto;
+  /* width: auto; */
 }
 .top_image h1{
     /*要素の配置*/
@@ -71,7 +71,9 @@ header{
 /* main */
 #video{
   margin-top: 10px;
-  max-width: 100%;
+  /* max-width: 100%; */
+  height: auto;
+  width: auto;
 }
 .container{
   height: 100vh;
@@ -84,14 +86,14 @@ header{
   padding: 50px 0;
 }
 .container P{
-  font-size: 20px;
-  padding:10px;
+  /* font-size: 20px;
+  padding:10px; */
 }
 
 .flex_container{
   margin-top: 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .service{
   position: relative;
@@ -118,6 +120,37 @@ header{
 .service_3 p{
   color: #000000;
 }
+.container_service_1{
+  border: solid;
+}
+.container_service_2{
+  border: solid;
+}
+.container_service_3{
+  border: solid;
+}
+.container_service_4{
+  border: solid;
+}
+/* 空撮コンテナ */
+.service_1_movie{
+  background-color: #fffacd;
+  height: 200px;
+  width: 200px;
+}
+.service_2_movie{
+  background-color: #f5deb3;
+  height: 200px;
+  width: 200px;
+}
+.service_3_movie{
+  background-color: #deb887;
+  height: 200px;
+  width: 200px;
+}
+
+
+/* コンタクトコンテナ */
 .flex_container_contact{
   margin-top: 0;
   display: flex;
@@ -152,6 +185,30 @@ header{
   /* FontAwesome5からはCSSでアイコンを表示する場合に、font-weightも合わせて指定する必要があります。Solidタイプのアイコンを表示するときにはfont-weight: 900;を、Regularタイプのアイコンを表示するときにはfont-weight: 400;を合わせて書きましょう。 */
   font-weight: 900;
   padding-right: 5px;
+}
+.service_plans{
+  width: 30%;
+}
+
+.upper-label{
+  background-color: #4169e1;
+  border-radius: 3%;
+}
+.upper-label h2{
+  color: #fff;
+  padding-bottom: 10px;
+}
+.p_1{
+  font-size: 15px;
+  font-style: oblique;
+  padding-top: 10px;
+  color: #fff;
+}
+.p_2{
+  ont-size: 15px;
+      color: #fff;
+      padding-top: 5px;
+      padding-bottom: 10px;
 }
 
 /* footer */
